@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/231c462b24.js" crossorigin="anonymous"></script>
+</head>
+<body>
+      <div id="hero">
+          <nav> 
+             <h1> Sharanya</h1>
+               <ul>
+                    <li><a href="#Header">HOME</a></li>
+                    <li><a href="#About">ABOUT</a></li>
+                    <li><a href="#Services">SERVICES</a></li>
+                    <li><a href="#Portfolio">PORTFOLIO</a></li>
+                    <li><a href="#Contact">CONTACT</a></li>
+               </ul>
+          </nav>
+          <div class="detel">
+             <h2>I,m Boddu<span>Sharanya</span></h2>
+             <p>This is my official portfolio website to show all details</p>
+             <a href="e">DOWNLOAD CV</a>
+          </div>
+          <div class="images">
+              <img src="download.jpg" class="download">
+          </div>
+      </div>
+  <!-- --------about-------- -->    
+<div id="about">
+  <div class="container">
+     <div class="row">
+              <div class="about-cel-1">
+                     <h1 class="sub-title">About Me</h1>
+                  <p>I am boddu sharanya ,studying in icfai university.I am studying cse. I completed my second year of 
+                btech.I am intrested in web development domain.I want to learn about web development. </p>
+             </div>
+            <div class="about-list">
+                  <div>
+                       <h2>Skills</h2>
+                         <p>html,css,javascrip</p>
+                  </div>
+                  <div>
+                        <h2>Experience</h2>
+                       <p>Did some websites using html,css,javascrips.[food blog website,restaurent menu]</p>
+                  </div>
+                   <div>
+                   <h2>Education</h2>
+                      <p>completed b.tech second year in ICFAI UNIVERSITY</p>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+<!-- --------services---------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div> 
+                <h2> Web Development</h2>
+                <p>The process of planning,conceptualizing,and implementing the plan for designing a website
+                    in a way that functional and offers a good user experience.
+                </p>
+            </div>
+            <div>
+                <h2>Mobile Development</h2>
+                <p> App design is an ongoing process comprising user experience and user interface elements</p>
+            </div>
+
+        </div>
+    </div>
+<!---------------portfolio----------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div>
+                <h2>Food Blog Website</h2>
+                <p> In previous semester i did a project on designing a food blog website by using html and css
+                    under our lectures guidence.which includes a person tasting different food from different 
+                    restaurents and giving riview on that dish and share his/her experience in two or three  
+                    lines with the picture of the dish.I am looking forward to learn some concepts to improve  
+                    my skills in web development and mobile development. 
+                 </p>
+
+            </div>
+        
+        </div> 
+    </div>
+</div>
+<!---------------contact---------------->
+<div id="contact">
+    <div class="container">
+        <div class="=row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="far fa-paper-plane"></i>boddu.sharanya@techineur.com</p>
+                <p><i class="fa-solid fa-phone"></i>7842464249</p>
+            </div>
+            <a href="e"  class="btn btn2"></a>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Name" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tablecontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classlist.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classlist.remove("active-tab");
+        }
+        event.currentTarget.classlist.add("active-link");
+        document.getelementById(tabname).classlist.add("active-tab");
+    }
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzvtKHetNCXKLAogL80T_-9t4mq9lXsVLd8SDNs5f2xvg25V5Y6e2mv2A84wINHZ5cf/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+   </body>
+</html>
